@@ -28,6 +28,26 @@
       <ul class="list-group container" id="lista">
       </ul>
     </div>
+
+     <div class="container" id="detallePelicula" style="display: none;">
+      <h2 id="tituloDetalle"></h2>
+      <p id="overviewDetalle"></p>
+      <ul id="generosDetalle"></ul>
+      <div>
+        <button class="btn btn-secondary" id="btnMostrarInfo">Mostrar Información Adicional</button>
+        <div id="infoAdicional" style="display: none;">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Información Adicional
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" id="anoLanzamiento"></a></li>
+            <li><a class="dropdown-item" id="duracion"></a></li>
+            <li><a class="dropdown-item" id="presupuesto"></a></li>
+            <li><a class="dropdown-item" id="ganancias"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="text-muted py-3">
