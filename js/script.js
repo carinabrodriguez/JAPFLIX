@@ -44,10 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
    //Función para aplicar las estrellas del rating
     
     function createStarRating(rating) {
-        const maxRating = parseFloat(rating / 2);
+        const maxRating = 5
+        const numStars = Math.round(rating / 2)
         let starHTML = "";
         for (let i = 1; i <= maxRating; i++) {
-            if (i <= rating) {
+            if (i <= numStars) {
                 starHTML += '<span class="fa fa-star checked"></span>';
             } else {
                 starHTML += '<span class="fa fa-star"></span>';
