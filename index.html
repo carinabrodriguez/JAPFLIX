@@ -9,7 +9,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
-  
+
 </head>
 
 <body class="bg-dark">
@@ -29,24 +29,40 @@
       </ul>
     </div>
 
-     <div class="container" id="detallePelicula" style="display: none;">
+    <div class="container" id="detallePelicula" style="display: none;">
       <h2 id="tituloDetalle"></h2>
       <p id="overviewDetalle"></p>
       <ul id="generosDetalle"></ul>
-      <div>
-        <button class="btn btn-secondary" id="btnMostrarInfo">Mostrar Información Adicional</button>
-        <div id="infoAdicional" style="display: none;">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Información Adicional
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" id="anoLanzamiento"></a></li>
-            <li><a class="dropdown-item" id="duracion"></a></li>
-            <li><a class="dropdown-item" id="presupuesto"></a></li>
-            <li><a class="dropdown-item" id="ganancias"></a></li>
-          </ul>
+
+
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample" id="offcanvasBtn">
+        Mostrar Información Adicional
+      </button>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
+        id="offcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div id="overviewCanvas">
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Más Información
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" id="year"></a></li>
+              <li><a class="dropdown-item" href="#" id="runtime"></a></li>
+              <li><a class="dropdown-item" href="#" id="budget"></a></li>
+              <li><a class="dropdown-item" href="#" id="revenue"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
+
     </div>
   </main>
 
