@@ -81,14 +81,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const duración = document.getElementById("runtime")
       const presupuesto = document.getElementById("budget")
       const ganancias = document.getElementById("revenue")
+      const genresmovie = pelicula.genres.map((genre) => ` ` + genre.name);
+      const genresoffcanva = document.getElementById("genresCanvas")
 
 
-      anoLanzamiento.textContent = `Año de Lanzamiento: ${pelicula.release_date.substring(0, 4)}`;
-      duración.textContent = `Duración: ${pelicula.runtime} minutos`;
-      presupuesto.textContent = `Presupuesto: $${pelicula.budget.toLocaleString()}`;
-      ganancias.textContent = `Ganancias: $${pelicula.revenue.toLocaleString()}`;
+      anoLanzamiento.textContent = `Release Year: ${pelicula.release_date.substring(0, 4)}`;
+      duración.textContent = `Runtime: ${pelicula.runtime} minutes`;
+      genresoffcanva.textContent = `${genresmovie}`;
+      presupuesto.textContent = `Budget: $${pelicula.budget.toLocaleString()}`;
+      ganancias.textContent = `Revenue: $${pelicula.revenue.toLocaleString()}`;
 
-      
+
+
       titleCanvas.textContent = `${pelicula.title}`
       overviewCanvas.textContent = `${pelicula.overview}`
     })
