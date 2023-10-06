@@ -88,13 +88,9 @@ document.addEventListener("DOMContentLoaded", function () {
       presupuesto.textContent = `Presupuesto: $${pelicula.budget.toLocaleString()}`;
       ganancias.textContent = `Ganancias: $${pelicula.revenue.toLocaleString()}`;
 
-      titleCanvas.textContent = `
-      ${pelicula.title}
-      `
-
-      overviewCanvas.textContent = `
-      ${pelicula.overview}
-      `
+      
+      titleCanvas.textContent = `${pelicula.title}`
+      overviewCanvas.textContent = `${pelicula.overview}`
     })
   }
 
